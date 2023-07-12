@@ -1,6 +1,6 @@
 Package: iotc.data.reference.datasets.NC
 Type: Package
-Title: All official IOTC NC datasets:
+Title: All official IOTC NC datasets
 Version: 2023.07.12
 Author: IOTC Secretariat (data section)
 Maintainer: IOTC Secretariat (data section) <IOTC-Statistics@fao.org>
