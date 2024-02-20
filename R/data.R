@@ -1,5 +1,5 @@
 #' A list of metadata fields describing the various datasets.
-#' These include the number of row for each dataset and their date of last update
+#' These include the number of rows for each dataset and their date of last update
 "METADATA"
 
 #' The 'raw' nominal catch dataset
