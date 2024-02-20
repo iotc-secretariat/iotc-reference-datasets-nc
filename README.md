@@ -13,6 +13,7 @@ Simply run the `load_datasets.R` script included under the `data-raw` folder.
 The script will take care of:
 
 -   loading all current _raw_ retained catch data (`IOTDB`.`dbo`.`V_LEGACY_NC`), _best scientific_estimates_ of retained catch data (`IOTDB`.`dbo`.`est_NCdissag`), and the estimated retained catches in weight and number (`WP_CE_raised`.`dbo`.`CA_RAISED`) using the IOTC data libraries 
+-   loading the _non factorised_ version of the _raw_ retained catch data (`IOTDB`.`dbo`.`V_LEGACY_NC`) which contains data for *ALL* fisheries and species (i.e., none of these collapses under the _other_ category)
 -   producing the `.rda` R data file corresponding to each of the three retained catch datasets above, eventually storing it under the `data` folder of the project
 -   uploading the `.rda` files onto the [*Downloads* section](https://bitbucket.org/iotc-ws/iotc-reference-datasets-nc/downloads/) of the BitBucket repository
 
@@ -50,14 +51,15 @@ or select `Build` / `Install package` from within R studio
 ### Datasets
 
 1.  `RAW` - *raw* retained catch data for all species (including bycatch ones)
-2.  `SCI` - *best scientific estimates* of retained catches **for the 16 IOTC species only**, fully disaggregated by species and gear
-3.  `RSD` - estimates of retained catches **in weight and numbers** for the five major IOTC species (**albacore tuna**, **bigeye tuna**, **skipjack tuna**, **swordfish**, and **yellowfin tuna**) fully disaggregated by species and gears and with detailed school-type information
-4.  `DQA` - data quality of the three major IOTC datasets (retained catches, catch and effort, size-frequency) compared to the available retained catches per year
-5.  `LAST_UPDATE` - the date of last update / production of the datasets
+2.  `RAW_NF` - Same as `RAW` but not factorised by fishery and species
+3.  `SCI` - *best scientific estimates* of retained catches **for the 16 IOTC species only**, fully disaggregated by species and gear
+4.  `RSD` - estimates of retained catches **in weight and numbers** for the five major IOTC species (**albacore tuna**, **bigeye tuna**, **skipjack tuna**, **swordfish**, and **yellowfin tuna**) fully disaggregated by species and gears and with detailed school-type information
+5.  `DQA` - data quality of the three major IOTC datasets (retained catches, catch and effort, size-frequency) compared to the available retained catches per year
+6.  `LAST_UPDATE` - the date of last update / production of the datasets
 
 ## Structure of the datasets
 
-### `RAW` and `SCI`
+### `RAW`, `RAW_NF` and `SCI`
 
 -   `YEAR` \< *to be described* \>
 -   `FISHING_GROUND_CODE` \< *to be described* \>
