@@ -12,9 +12,8 @@ Simply run the `load_datasets.R` script included under the `data-raw` folder.
 
 The script will take care of:
 
--   loading all current raw size-frequency data using the IOTC data libraries
--   creating distinct *subsets* of the size-frequency records, one for each species group
--   producing a distinct `.rda` R data file for each subset of the original information, eventually stored under the `data` folder of the project
+-   loading all current _raw_ retained catch data (`IOTDB`.`dbo`.`V_LEGACY_NC`), _best scientific_estimates_ of retained catch data (`IOTDB`.`dbo`.`est_NCdissag`), and the estimated retained catches in weight and number (`WP_CE_raised`.`dbo`.`CA_RAISED`) using the IOTC data libraries 
+-   produce the `.rda` R data file corresponding to each of the three retained catch datasets above, eventually storing it under the `data` folder of the project
 -   uploading the `.rda` files onto the [*Downloads* section](https://bitbucket.org/iotc-ws/iotc-reference-datasets-nc/downloads/) of the BitBucket repository
 
 ## How to build the package
