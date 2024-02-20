@@ -13,7 +13,7 @@ Simply run the `load_datasets.R` script included under the `data-raw` folder.
 The script will take care of:
 
 -   loading all current _raw_ retained catch data (`IOTDB`.`dbo`.`V_LEGACY_NC`), _best scientific_estimates_ of retained catch data (`IOTDB`.`dbo`.`est_NCdissag`), and the estimated retained catches in weight and number (`WP_CE_raised`.`dbo`.`CA_RAISED`) using the IOTC data libraries 
--   produce the `.rda` R data file corresponding to each of the three retained catch datasets above, eventually storing it under the `data` folder of the project
+-   producing the `.rda` R data file corresponding to each of the three retained catch datasets above, eventually storing it under the `data` folder of the project
 -   uploading the `.rda` files onto the [*Downloads* section](https://bitbucket.org/iotc-ws/iotc-reference-datasets-nc/downloads/) of the BitBucket repository
 
 ## How to build the package
