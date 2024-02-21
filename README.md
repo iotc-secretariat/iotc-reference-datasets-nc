@@ -19,16 +19,14 @@ The script will take care of:
 
 ## How to build the package
 
-From within a R session run:
+Run the `build_and_upload.R` script.
 
-```         
-devtools::document(roclets = c('rd', 'collate', 'namespace'))
-devtools::build()
-```
+This will:
 
-or select `Build` / `Build source package` from within R studio
+-   load all necessary datasets (see above)
+-   build the package
+-   upload the `.rda` dataset files and the built package (as a `.tar.gz` file) onto the [*Downloads* section](https://bitbucket.org/iotc-ws/iotc-reference-datasets-nc/downloads/) of the BitBucket repository
 
-At the end of the installation, the script uploads the artifacts (i.e., the R data files) onto the [Download](https://bitbucket.org/iotc-ws/iotc-reference-datasets-nc/downloads/) section of the BitBucket repository.
 
 For this to work, it is necessary to configure in advance the `BITBUCKET_UPLOAD_NC_DATASET_TOKEN` as an environment variable that should be assigned an access token created for the specific repository (with the `repository:write` OAuth 2.0 scope).
 
