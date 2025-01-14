@@ -59,19 +59,19 @@ or select `Build` / `Install package` from within R studio
 
 ### `RAW`, `RAW_NF` and `SCI`
 
--   `YEAR` \< *to be described* \>
--   `FISHING_GROUND_CODE` \< *to be described* \>
--   `FISHING_GROUND` \< *to be described* \>
--   `FLEET_CODE` \< *to be described* \>
--   `FLEET` \< *to be described* \>
+-   `YEAR` Gregorian calendar year of the fishing activities reported through the datasets
+-   `FISHING_GROUND_CODE` Code of legacy [IOTC main areas](https://data.iotc.org/reference/latest/domain/legacy/#mainAreas)
+-   `FISHING_GROUND` Name of legacy [IOTC main areas](https://data.iotc.org/reference/latest/domain/legacy/#mainAreas)
+-   `FLEET_CODE` Code of legacy [IOTC fishing fleets](https://data.iotc.org/reference/latest/domain/legacy/#fleets)
+-   `FLEET` Name of legacy [IOTC fishing fleets](https://data.iotc.org/reference/latest/domain/legacy/#fleets)
 -   `FISHERY_TYPE_CODE` \< *to be described* \>
 -   `FISHERY_TYPE` \< *to be described* \>
 -   `FISHERY_GROUP_CODE` \< *to be described* \>
 -   `FISHERY_GROUP` \< *to be described* \>
 -   `FISHERY_CODE` \< *to be described* \>
 -   `FISHERY` \< *to be described* \>
--   `GEAR_CODE` \< *to be described* \>
--   `GEAR` \< *to be described* \>
+-   `GEAR_CODE` Code of legacy [IOTC fishing gears](https://data.iotc.org/reference/latest/domain/legacy/#gears)
+-   `GEAR` Name of legacy [IOTC fishing gears](https://data.iotc.org/reference/latest/domain/legacy/#gears)
 -   `IUCN_STATUS_CODE` \< *to be described* \>
 -   `IUCN_STATUS` \< *to be described* \>
 -   `SPECIES_WP_CODE` \< *to be described* \>
@@ -79,16 +79,16 @@ or select `Build` / `Install package` from within R studio
 -   `SPECIES_GROUP_CODE` \< *to be described* \>
 -   `SPECIES_GROUP` \< *to be described* \>
 -   `SPECIES_CATEGORY_CODE"`SPECIES_CATEGORY\` \< *to be described* \>
--   `SPECIES_CODE` \< *to be described* \>
--   `SPECIES` \< *to be described* \>
--   `SPECIES_SCIENTIFIC` \< *to be described* \>
+-   `SPECIES_CODE` Code of legacy [IOTC species](https://data.iotc.org/reference/latest/domain/legacy/#species)
+-   `SPECIES` Common English name of legacy [IOTC species](https://data.iotc.org/reference/latest/domain/legacy/#species)
+-   `SPECIES_SCIENTIFIC` Scientific name of legacy [IOTC species](https://data.iotc.org/reference/latest/domain/legacy/#species)
 -   `SPECIES_FAMILY` \< *to be described* \>
 -   `SPECIES_ORDER` \< *to be described* \>
--   `IS_IOTC_SPECIES` \< *to be described* \>
--   `IS_SPECIES_AGGREGATE` \< *to be described* \>
--   `IS_SSI` \< *to be described* \>
--   `CATCH` \< *to be described* \>
--   `CATCH_UNIT_CODE` \< *to be described* \>
+-   `IS_IOTC_SPECIES` Indicates whether the taxon is a species or a group of [IOTC species](https://data.iotc.org/reference/latest/domain/biology/#IOTCspecies)
+-   `IS_SPECIES_AGGREGATE` Indicates whether the taxon represents an aggregate of different species
+-   `IS_SSI` Indicates whether the taxon is an [IOTC Species of Special Interest](https://data.iotc.org/reference/latest/domain/biology/#SSIspecies)
+-   `CATCH` Estimate of retained catch in live weight equivalent 
+-   `CATCH_UNIT_CODE` Code of legacy [IOTC catch units](https://data.iotc.org/reference/latest/domain/legacy/#catchUnits) 
 -   `FATE_TYPE_CODE` \< *to be described* \>
 -   `FATE_TYPE` \< *to be described* \>
 -   `FATE_CODE` \< *to be described* \>
