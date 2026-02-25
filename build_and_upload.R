@@ -25,9 +25,9 @@ render("./rmd/01_RC_RAW_metadata.Rmd",
        output_file = paste0("RC_RAW_metadata_", Sys.Date(), ".html")
        )
 
-render("./rmd/03_RC_RAW_FN_metadata.Rmd",
+render("./rmd/03_RC_RAW_NF_metadata.Rmd",
        output_dir = "./outputs/html/",
-       output_file = paste0("RC_RAW_FN_metadata_", Sys.Date(), ".html")
+       output_file = paste0("RC_RAW_NF_metadata_", Sys.Date(), ".html")
 )
 
 ## Best scientific estimates ####s
