@@ -20,14 +20,19 @@ source("./data-raw/02_export_datasets.R")
 source("./data-raw/03_export_metadata.R")
 
 ## Prior to disaggregation ####
-render("./rmd/01_RC_RAW_metadata.Rmd",
-       output_dir = "./outputs/html/",
-       output_file = paste0("RC_RAW_metadata_", Sys.Date(), ".html")
-       )
 
+### Raw dataset ####
 render("./rmd/03_RC_RAW_NF_metadata.Rmd",
        output_dir = "./outputs/html/",
        output_file = paste0("RC_RAW_NF_metadata_", Sys.Date(), ".html")
+)
+
+### Factorised dataset ####
+# Only the main species and gears are considered and all the rest is aggregated under 'UNCL'
+# The factorisation is required to use the IOTC colour palettes (retricted to )
+render("./rmd/01_RC_RAW_metadata.Rmd",
+       output_dir = "./outputs/html/",
+       output_file = paste0("RC_RAW_metadata_", Sys.Date(), ".html")
 )
 
 ## Best scientific estimates ####s
