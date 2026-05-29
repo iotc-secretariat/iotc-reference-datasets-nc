@@ -17,7 +17,9 @@ source("./data-raw/02_export_datasets.R")
 # Table [IOTDB].[dbo].[est_NCdissag]: SCI | "Z:/Public datasets/2025-01-14/IOTC-DATASETS-2025-01-14-NC-SCI_1950-2023.xlsx"
 
 # Generate dataset description ###
-source("./data-raw/03_export_metadata.R")
+setwd("./data-raw/")
+source("03_export_metadata.R")
+setwd("..")
 
 ## Prior to disaggregation ####
 
