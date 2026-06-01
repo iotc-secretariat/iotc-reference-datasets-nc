@@ -18,29 +18,30 @@ source("./data-raw/02_export_datasets.R")
 
 # Generate dataset description ###
 setwd("./data-raw/")
-source("03_export_metadata.R")
+source("03_define_data_fields.R")
 setwd("..")
 
 ## Prior to disaggregation ####
 
 ### Raw dataset ####
 render("./rmd/03_RC_RAW_NF_metadata.Rmd",
-       output_dir = "./outputs/html/",
-       output_file = paste0("RC_RAW_NF_metadata_", Sys.Date(), ".html")
+       output_dir = paste0("./outputs/html/", as.character(Sys.Date())),
+       output_file = paste0("RC_RAW_NF_metadata.html")
 )
 
 ### Factorised dataset ####
+
 # Only the main species and gears are considered and all the rest is aggregated under 'UNCL'
-# The factorisation is required to use the IOTC colour palettes (retricted to )
+# The factorisation is required to use the IOTC colour palettes
 render("./rmd/01_RC_RAW_metadata.Rmd",
-       output_dir = "./outputs/html/",
-       output_file = paste0("RC_RAW_metadata_", Sys.Date(), ".html")
+       output_dir = paste0("./outputs/html/", as.character(Sys.Date())),
+       output_file = paste0("RC_RAW_metadata.html")
 )
 
 ## Best scientific estimates ####s
 render("./rmd/02_RC_SCI_metadata.Rmd",
-       output_dir = "./outputs/html/",
-       output_file = paste0("RC_SCI_metadata_", Sys.Date(), ".html")
+       output_dir = paste0("./outputs/html/", as.character(Sys.Date())),
+       output_file = paste0("RC_SCI_metadata.html")
        )
 
 # Export datasets to Zenodo with Geoflow ####

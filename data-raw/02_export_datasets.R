@@ -22,10 +22,12 @@ dataset_export <- function(DataSet, PathName, rmcsv = FALSE){
 # Export the files ####
 IDENTIFIER <- "IOTC-DATASETS"
 
-if (!exists(as.character(Sys.Date()))) dir.create(path = paste0("./outputs/datasets/", as.character(Sys.Date())))
+datasetPath <- paste0("./outputs/datasets/", as.character(Sys.Date()))
 
-RC_RAW_FILES_SIZE <- dataset_export(RC_RAW, paste0("./outputs/datasets/", Sys.Date(), "/", IDENTIFIER, "-RC-RAW-", min(RAW$YEAR), "-", max(RAW$YEAR)), rmcsv = TRUE)
+if (!exists(datasetPath)) dir.create(path = datasetPath, showWarnings = FALSE)
 
-RC_RAW_NF_FILES_SIZE <- dataset_export(RC_RAW_NF, paste0("./outputs/datasets/", Sys.Date(), "/", IDENTIFIER, "-RC-RAW_NF-", min(RAW_NF$YEAR), "-", max(RAW_NF$YEAR)), rmcsv = TRUE)
+RC_RAW_FILES_SIZE <- dataset_export(RC_RAW, paste0(datasetPath, "/", IDENTIFIER, "-RC-RAW-", min(RAW$YEAR), "-", max(RAW$YEAR)), rmcsv = TRUE)
 
-RC_SCI_FILES_SIZE <- dataset_export(RC_SCI, paste0("./outputs/datasets/", Sys.Date(), "/", IDENTIFIER, "-RC-SCI-", min(SCI$YEAR), "-", max(SCI$YEAR)), rmcsv = TRUE)
+RC_RAW_NF_FILES_SIZE <- dataset_export(RC_RAW_NF, paste0(datasetPath, "/", IDENTIFIER, "-RC-RAW_NF-", min(RAW_NF$YEAR), "-", max(RAW_NF$YEAR)), rmcsv = TRUE)
+
+RC_SCI_FILES_SIZE <- dataset_export(RC_SCI, paste0(datasetPath, "/", IDENTIFIER, "-RC-SCI-", min(SCI$YEAR), "-", max(SCI$YEAR)), rmcsv = TRUE)
